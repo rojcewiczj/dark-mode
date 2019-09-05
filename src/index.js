@@ -17,13 +17,16 @@ const App = () => {
       )
       .then(res => setCoinData(res.data))
       .catch(err => console.log(err));
-  }, []);
+     
+  }, []);console.log(coinData)
+
   return (
     <div className="App">
       <Navbar />
       <Charts coinData={coinData} />
     </div>
   );
+   
 };
 
 const rootElement = document.getElementById("root");
